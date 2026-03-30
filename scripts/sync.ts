@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 import type { Problem } from './types';
-import { LANG_EXT, DIFFICULTY_ICON } from './constants';
+import { LANG_EXT, DIFFICULTY_ICON, CATEGORY_ORDER, TAG_TO_CATEGORY } from './constants';
 
 const LEETCODE_GRAPHQL = 'https://leetcode.com/graphql';
 const USERNAME = process.env.LEETCODE_USERNAME ?? 'samuelhb';
@@ -183,28 +183,59 @@ function solution() {
 
 // --- README generation ---
 
-function generateReadme(problems: Problem[]): string {
-  const sorted = [...problems].sort(
-    (a, b) => parseInt(a.questionFrontendId) - parseInt(b.questionFrontendId)
-  );
+function categorize(problem: Problem): string {
+  for (const tag of problem.topicTags) {
+    const category = TAG_TO_CATEGORY[tag.name];
+    if (category) return category;
+  }
+  return 'Other';
+}
 
+function problemRow(p: Problem): string {
+  const icon = DIFFICULTY_ICON[p.difficulty] ?? '';
+  const tags = p.topicTags.map((t) => t.name).join(', ');
+  const existing = findExistingSolutionFile(p.titleSlug);
+  const hasRealSolution = existing && !isStubFile(existing);
+  const solution = hasRealSolution
+    ? `[Solution](${path.relative(process.cwd(), existing!)})`
+    : '—';
+  return `| ${p.questionFrontendId} | [${p.title}](https://leetcode.com/problems/${p.titleSlug}/) | ${icon} ${p.difficulty} | ${tags || '—'} | ${solution} |`;
+}
+
+function generateReadme(problems: Problem[]): string {
   const easy = problems.filter((p) => p.difficulty === 'Easy').length;
   const medium = problems.filter((p) => p.difficulty === 'Medium').length;
   const hard = problems.filter((p) => p.difficulty === 'Hard').length;
   const today = new Date().toISOString().split('T')[0];
 
-  const rows = sorted
-    .map((p) => {
-      const icon = DIFFICULTY_ICON[p.difficulty] ?? '';
-      const tags = p.topicTags.map((t) => t.name).join(', ');
-      const existing = findExistingSolutionFile(p.titleSlug);
-      const hasRealSolution = existing && !isStubFile(existing);
-      const solution = hasRealSolution
-        ? `[Solution](${path.relative(process.cwd(), existing!)})`
-        : '—';
-      return `| ${p.questionFrontendId} | [${p.title}](https://leetcode.com/problems/${p.titleSlug}/) | ${icon} ${p.difficulty} | ${tags || '—'} | ${solution} |`;
+  // Group problems by category
+  const groups = new Map<string, Problem[]>();
+  for (const p of problems) {
+    const cat = categorize(p);
+    if (!groups.has(cat)) groups.set(cat, []);
+    groups.get(cat)!.push(p);
+  }
+
+  const DIFF_ORDER: Record<string, number> = { Easy: 0, Medium: 1, Hard: 2 };
+
+  // Sort problems within each category by difficulty, then by problem number
+  for (const [, list] of groups) {
+    list.sort(
+      (a, b) =>
+        (DIFF_ORDER[a.difficulty] ?? 0) - (DIFF_ORDER[b.difficulty] ?? 0) ||
+        parseInt(a.questionFrontendId) - parseInt(b.questionFrontendId)
+    );
+  }
+
+  const TABLE_HEADER = `| # | Problem | Difficulty | Tags | Solution |\n|---|---------|------------|------|----------|`;
+
+  const sections = CATEGORY_ORDER
+    .filter((cat) => groups.has(cat))
+    .map((cat) => {
+      const rows = groups.get(cat)!.map(problemRow).join('\n');
+      return `### ${cat}\n\n${TABLE_HEADER}\n${rows}`;
     })
-    .join('\n');
+    .join('\n\n');
 
   return `# LeetCode Solutions
 
@@ -218,9 +249,7 @@ function generateReadme(problems: Problem[]): string {
 
 ## Problems
 
-| # | Problem | Difficulty | Tags | Solution |
-|---|---------|------------|------|----------|
-${rows}
+${sections}
 
 ---
 

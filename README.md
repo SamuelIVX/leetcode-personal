@@ -88,21 +88,23 @@
 | 2044 | [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | 🟡 Medium | Array, Backtracking, Bit Manipulation, Enumeration | [Solution](solutions/count-number-of-maximum-bitwise-or-subsets.py) |
 | 2799 | [Count Complete Subarrays in an Array](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | 🟡 Medium | Array, Hash Table, Sliding Window | [Solution](solutions/count-complete-subarrays-in-an-array.py) |
 
-### String
+### Backtracking
 
 | # | Problem | Difficulty | Tags | Solution |
 |---|---------|------------|------|----------|
-| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | String, Stack | [Solution](solutions/valid-parentheses.py) |
-| 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | 🟢 Easy | String, Stack | [Solution](solutions/remove-all-adjacent-duplicates-in-string.py) |
-| 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | 🟢 Easy | String, Stack | [Solution](solutions/make-the-string-great.py) |
-| 1614 | [Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | 🟢 Easy | String, Stack | [Solution](solutions/maximum-nesting-depth-of-the-parentheses.py) |
-| 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/minimum-string-length-after-removing-substrings.py) |
-| 3110 | [Score of a String](https://leetcode.com/problems/score-of-a-string/) | 🟢 Easy | String | [Solution](solutions/score-of-a-string.py) |
-| 3174 | [Clear Digits](https://leetcode.com/problems/clear-digits/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/clear-digits.py) |
-| 3258 | [Count Substrings That Satisfy K-Constraint I](https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i/) | 🟢 Easy | String, Sliding Window | [Solution](solutions/count-substrings-that-satisfy-k-constraint-i.py) |
-| 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 🟡 Medium | String, Dynamic Programming, Backtracking | [Solution](solutions/generate-parentheses.py) |
-| 1910 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/remove-all-occurrences-of-a-substring.py) |
-| 2390 | [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/removing-stars-from-a-string.py) |
+| 77 | [Combinations](https://leetcode.com/problems/combinations/) | 🟡 Medium | Backtracking | [Solution](solutions/combinations.py) |
+
+### Binary Search
+
+| # | Problem | Difficulty | Tags | Solution |
+|---|---------|------------|------|----------|
+| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | 🟢 Easy | Binary Search, Interactive | [Solution](solutions/guess-number-higher-or-lower.py) |
+
+### Database
+
+| # | Problem | Difficulty | Tags | Solution |
+|---|---------|------------|------|----------|
+| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | 🟢 Easy | Database | [Solution](solutions/recyclable-and-low-fat-products.mysql) |
 
 ### Hash Table
 
@@ -122,17 +124,6 @@
 | 133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | 🟡 Medium | Hash Table, Depth-First Search, Breadth-First Search, Graph Theory | [Solution](solutions/clone-graph.py) |
 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | 🟡 Medium | Hash Table, Linked List | [Solution](solutions/copy-list-with-random-pointer.py) |
 
-### Two Pointers
-
-| # | Problem | Difficulty | Tags | Solution |
-|---|---------|------------|------|----------|
-| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/valid-palindrome.py) |
-| 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/reverse-string.py) |
-| 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | 🟢 Easy | Two Pointers, String, Greedy | [Solution](solutions/valid-palindrome-ii.py) |
-| 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | 🟢 Easy | Two Pointers, String, Stack, Simulation | [Solution](solutions/backspace-string-compare.py) |
-| 1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/merge-strings-alternately.py) |
-| 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | 🟢 Easy | Two Pointers, String, Stack | [Solution](solutions/reverse-prefix-of-word.py) |
-
 ### Linked List
 
 | # | Problem | Difficulty | Tags | Solution |
@@ -147,7 +138,17 @@
 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | 🟡 Medium | Linked List, Two Pointers, Stack, Recursion | [Solution](solutions/reorder-list.py) |
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 🔴 Hard | Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort | [Solution](solutions/merge-k-sorted-lists.py) |
 
-### Stack & Queue
+### Math
+
+| # | Problem | Difficulty | Tags | Solution |
+|---|---------|------------|------|----------|
+| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟢 Easy | Math, Dynamic Programming, Memoization | [Solution](solutions/climbing-stairs.py) |
+| 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | 🟢 Easy | Math, Dynamic Programming, Recursion, Memoization | [Solution](solutions/fibonacci-number.py) |
+| 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | 🟢 Easy | Math, Bit Manipulation | [Solution](solutions/number-of-steps-to-reduce-a-number-to-zero.java) |
+| 2235 | [Add Two Integers](https://leetcode.com/problems/add-two-integers/) | 🟢 Easy | Math | [Solution](solutions/add-two-integers.py) |
+| 2269 | [Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number/) | 🟢 Easy | Math, String, Sliding Window | [Solution](solutions/find-the-k-beauty-of-a-number.py) |
+
+### Stack
 
 | # | Problem | Difficulty | Tags | Solution |
 |---|---------|------------|------|----------|
@@ -155,11 +156,21 @@
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | 🟢 Easy | Stack, Design, Queue | [Solution](solutions/implement-queue-using-stacks.py) |
 | 155 | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟡 Medium | Stack, Design | [Solution](solutions/min-stack.py) |
 
-### Binary Search
+### String
 
 | # | Problem | Difficulty | Tags | Solution |
 |---|---------|------------|------|----------|
-| 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | 🟢 Easy | Binary Search, Interactive | [Solution](solutions/guess-number-higher-or-lower.py) |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | String, Stack | [Solution](solutions/valid-parentheses.py) |
+| 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | 🟢 Easy | String, Stack | [Solution](solutions/remove-all-adjacent-duplicates-in-string.py) |
+| 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | 🟢 Easy | String, Stack | [Solution](solutions/make-the-string-great.py) |
+| 1614 | [Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | 🟢 Easy | String, Stack | [Solution](solutions/maximum-nesting-depth-of-the-parentheses.py) |
+| 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/minimum-string-length-after-removing-substrings.py) |
+| 3110 | [Score of a String](https://leetcode.com/problems/score-of-a-string/) | 🟢 Easy | String | [Solution](solutions/score-of-a-string.py) |
+| 3174 | [Clear Digits](https://leetcode.com/problems/clear-digits/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/clear-digits.py) |
+| 3258 | [Count Substrings That Satisfy K-Constraint I](https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i/) | 🟢 Easy | String, Sliding Window | [Solution](solutions/count-substrings-that-satisfy-k-constraint-i.py) |
+| 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 🟡 Medium | String, Dynamic Programming, Backtracking | [Solution](solutions/generate-parentheses.py) |
+| 1910 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/remove-all-occurrences-of-a-substring.py) |
+| 2390 | [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/removing-stars-from-a-string.py) |
 
 ### Tree
 
@@ -173,27 +184,16 @@
 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 🟡 Medium | Tree, Breadth-First Search, Binary Tree | [Solution](solutions/binary-tree-level-order-traversal.py) |
 | 2415 | [Reverse Odd Levels of Binary Tree](https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/) | 🟡 Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | [Solution](solutions/reverse-odd-levels-of-binary-tree.py) |
 
-### Backtracking
+### Two Pointers
 
 | # | Problem | Difficulty | Tags | Solution |
 |---|---------|------------|------|----------|
-| 77 | [Combinations](https://leetcode.com/problems/combinations/) | 🟡 Medium | Backtracking | [Solution](solutions/combinations.py) |
-
-### Math
-
-| # | Problem | Difficulty | Tags | Solution |
-|---|---------|------------|------|----------|
-| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 🟢 Easy | Math, Dynamic Programming, Memoization | [Solution](solutions/climbing-stairs.py) |
-| 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | 🟢 Easy | Math, Dynamic Programming, Recursion, Memoization | [Solution](solutions/fibonacci-number.py) |
-| 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | 🟢 Easy | Math, Bit Manipulation | [Solution](solutions/number-of-steps-to-reduce-a-number-to-zero.java) |
-| 2235 | [Add Two Integers](https://leetcode.com/problems/add-two-integers/) | 🟢 Easy | Math | [Solution](solutions/add-two-integers.py) |
-| 2269 | [Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number/) | 🟢 Easy | Math, String, Sliding Window | [Solution](solutions/find-the-k-beauty-of-a-number.py) |
-
-### Database
-
-| # | Problem | Difficulty | Tags | Solution |
-|---|---------|------------|------|----------|
-| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | 🟢 Easy | Database | [Solution](solutions/recyclable-and-low-fat-products.mysql) |
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/valid-palindrome.py) |
+| 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/reverse-string.py) |
+| 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | 🟢 Easy | Two Pointers, String, Greedy | [Solution](solutions/valid-palindrome-ii.py) |
+| 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | 🟢 Easy | Two Pointers, String, Stack, Simulation | [Solution](solutions/backspace-string-compare.py) |
+| 1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | 🟢 Easy | Two Pointers, String | [Solution](solutions/merge-strings-alternately.py) |
+| 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | 🟢 Easy | Two Pointers, String, Stack | [Solution](solutions/reverse-prefix-of-word.py) |
 
 ---
 

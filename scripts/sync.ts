@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 import type { Problem } from './types';
-import { LANG_EXT, DIFFICULTY_ICON, CATEGORY_ORDER, TAG_TO_CATEGORY } from './constants';
+import { LANG_EXT, DIFFICULTY_ICON } from './constants';
 
 const LEETCODE_GRAPHQL = 'https://leetcode.com/graphql';
 const USERNAME = process.env.LEETCODE_USERNAME ?? 'samuelhb';
@@ -184,11 +184,7 @@ function solution() {
 // --- README generation ---
 
 function categorize(problem: Problem): string {
-  for (const tag of problem.topicTags) {
-    const category = TAG_TO_CATEGORY[tag.name];
-    if (category) return category;
-  }
-  return 'Other';
+  return problem.topicTags[0]?.name ?? 'Other';
 }
 
 function problemRow(p: Problem): string {
@@ -229,8 +225,7 @@ function generateReadme(problems: Problem[]): string {
 
   const TABLE_HEADER = `| # | Problem | Difficulty | Tags | Solution |\n|---|---------|------------|------|----------|`;
 
-  const sections = CATEGORY_ORDER
-    .filter((cat) => groups.has(cat))
+  const sections = [...groups.keys()].sort()
     .map((cat) => {
       const rows = groups.get(cat)!.map(problemRow).join('\n');
       return `### ${cat}\n\n${TABLE_HEADER}\n${rows}`;

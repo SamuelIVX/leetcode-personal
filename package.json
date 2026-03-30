@@ -1,0 +1,17 @@
+{
+  "name": "leetcode-personal",
+  "version": "1.0.0",
+  "scripts": {
+    "sync": "tsx scripts/sync.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

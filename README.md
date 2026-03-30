@@ -1,12 +1,12 @@
 # LeetCode Solutions
 
-> Auto-synced from LeetCode. Solutions are written in TypeScript.
+> Auto-synced from LeetCode. Solutions are primarily written in Python.
 
 ## Stats
 
 | Total | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 |-------|---------|----------|---------|
-| **100** | 69 | 30 | 1 |
+| **130** | 95 | 34 | 1 |
 
 ## Problems
 
@@ -112,6 +112,36 @@
 | 1876 | [Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/) | 🟢 Easy | Hash Table, String, Sliding Window, Counting | [Solution](solutions/substrings-of-size-three-with-distinct-characters.py) |
 | 1910 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/remove-all-occurrences-of-a-substring.py) |
 | 1913 | [Maximum Product Difference Between Two Pairs](https://leetcode.com/problems/maximum-product-difference-between-two-pairs/) | 🟢 Easy | Array, Sorting | [Solution](solutions/maximum-product-difference-between-two-pairs.py) |
+| 1920 | [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/) | 🟢 Easy | Array, Simulation | [Solution](solutions/build-array-from-permutation.py) |
+| 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | 🟢 Easy | Array, Simulation | [Solution](solutions/concatenation-of-array.py) |
+| 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | 🟢 Easy | Two Pointers, String, Stack | [Solution](solutions/reverse-prefix-of-word.py) |
+| 2044 | [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | 🟡 Medium | Array, Backtracking, Bit Manipulation, Enumeration | [Solution](solutions/count-number-of-maximum-bitwise-or-subsets.py) |
+| 2108 | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | 🟢 Easy | Array, Two Pointers, String | [Solution](solutions/find-first-palindromic-string-in-the-array.py) |
+| 2215 | [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/) | 🟢 Easy | Array, Hash Table | [Solution](solutions/find-the-difference-of-two-arrays.py) |
+| 2235 | [Add Two Integers](https://leetcode.com/problems/add-two-integers/) | 🟢 Easy | Math | [Solution](solutions/add-two-integers.py) |
+| 2269 | [Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number/) | 🟢 Easy | Math, String, Sliding Window | [Solution](solutions/find-the-k-beauty-of-a-number.py) |
+| 2390 | [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) | 🟡 Medium | String, Stack, Simulation | [Solution](solutions/removing-stars-from-a-string.py) |
+| 2415 | [Reverse Odd Levels of Binary Tree](https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/) | 🟡 Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | [Solution](solutions/reverse-odd-levels-of-binary-tree.py) |
+| 2441 | [Largest Positive Integer That Exists With Its Negative](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | 🟢 Easy | Array, Hash Table, Two Pointers, Sorting | [Solution](solutions/largest-positive-integer-that-exists-with-its-negative.py) |
+| 2465 | [Number of Distinct Averages](https://leetcode.com/problems/number-of-distinct-averages/) | 🟢 Easy | Array, Hash Table, Two Pointers, Sorting | [Solution](solutions/number-of-distinct-averages.py) |
+| 2540 | [Minimum Common Value](https://leetcode.com/problems/minimum-common-value/) | 🟢 Easy | Array, Hash Table, Two Pointers, Binary Search | [Solution](solutions/minimum-common-value.py) |
+| 2562 | [Find the Array Concatenation Value](https://leetcode.com/problems/find-the-array-concatenation-value/) | 🟢 Easy | Array, Two Pointers, Simulation | [Solution](solutions/find-the-array-concatenation-value.py) |
+| 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/minimum-string-length-after-removing-substrings.py) |
+| 2799 | [Count Complete Subarrays in an Array](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | 🟡 Medium | Array, Hash Table, Sliding Window | [Solution](solutions/count-complete-subarrays-in-an-array.py) |
+| 2824 | [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/) | 🟢 Easy | Array, Two Pointers, Binary Search, Sorting | [Solution](solutions/count-pairs-whose-sum-is-less-than-target.py) |
+| 2903 | [Find Indices With Index and Value Difference I](https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/) | 🟢 Easy | Array, Two Pointers | [Solution](solutions/find-indices-with-index-and-value-difference-i.py) |
+| 2932 | [Maximum Strong Pair XOR I](https://leetcode.com/problems/maximum-strong-pair-xor-i/) | 🟢 Easy | Array, Hash Table, Bit Manipulation, Trie, Sliding Window | [Solution](solutions/maximum-strong-pair-xor-i.py) |
+| 2942 | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | 🟢 Easy | Array, String | [Solution](solutions/find-words-containing-character.py) |
+| 3005 | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | 🟢 Easy | Array, Hash Table, Counting | [Solution](solutions/count-elements-with-maximum-frequency.py) |
+| 3090 | [Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/) | 🟢 Easy | Hash Table, String, Sliding Window | [Solution](solutions/maximum-length-substring-with-two-occurrences.py) |
+| 3110 | [Score of a String](https://leetcode.com/problems/score-of-a-string/) | 🟢 Easy | String | [Solution](solutions/score-of-a-string.py) |
+| 3174 | [Clear Digits](https://leetcode.com/problems/clear-digits/) | 🟢 Easy | String, Stack, Simulation | [Solution](solutions/clear-digits.py) |
+| 3194 | [Minimum Average of Smallest and Largest Elements](https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/) | 🟢 Easy | Array, Two Pointers, Sorting | [Solution](solutions/minimum-average-of-smallest-and-largest-elements.py) |
+| 3258 | [Count Substrings That Satisfy K-Constraint I](https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i/) | 🟢 Easy | String, Sliding Window | [Solution](solutions/count-substrings-that-satisfy-k-constraint-i.py) |
+| 3289 | [The Two Sneaky Numbers of Digitville](https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/) | 🟢 Easy | Array, Hash Table, Math | [Solution](solutions/the-two-sneaky-numbers-of-digitville.py) |
+| 3318 | [Find X-Sum of All K-Long Subarrays I](https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i/) | 🟢 Easy | Array, Hash Table, Sliding Window, Heap (Priority Queue) | [Solution](solutions/find-x-sum-of-all-k-long-subarrays-i.py) |
+| 3432 | [Count Partitions with Even Sum Difference](https://leetcode.com/problems/count-partitions-with-even-sum-difference/) | 🟢 Easy | Array, Math, Prefix Sum | [Solution](solutions/count-partitions-with-even-sum-difference.py) |
+| 3541 | [Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | 🟢 Easy | Hash Table, String, Counting | [Solution](solutions/find-most-frequent-vowel-and-consonant.py) |
 
 ---
 

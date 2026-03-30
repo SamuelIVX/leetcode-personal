@@ -5,42 +5,13 @@ import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
 
+import type { Problem } from './types';
+import { LANG_EXT, DIFFICULTY_ICON } from './constants';
+
 const LEETCODE_GRAPHQL = 'https://leetcode.com/graphql';
 const USERNAME = process.env.LEETCODE_USERNAME ?? 'samuelhb';
 const SESSION = process.env.LEETCODE_SESSION ?? '';
 const SOLUTIONS_DIR = path.join(process.cwd(), 'solutions');
-
-const LANG_EXT: Record<string, string> = {
-  typescript: 'ts',
-  javascript: 'js',
-  python3: 'py',
-  python: 'py',
-  java: 'java',
-  cpp: 'cpp',
-  c: 'c',
-  csharp: 'cs',
-  golang: 'go',
-  kotlin: 'kt',
-  swift: 'swift',
-  rust: 'rs',
-  scala: 'scala',
-  ruby: 'rb',
-  php: 'php',
-};
-
-// --- Types ---
-
-interface TopicTag {
-  name: string;
-}
-
-interface Problem {
-  questionFrontendId: string;
-  title: string;
-  titleSlug: string;
-  difficulty: 'Easy' | 'Medium' | 'Hard';
-  topicTags: TopicTag[];
-}
 
 // --- Auth headers ---
 
@@ -91,13 +62,18 @@ async function fetchAllSolvedProblems(): Promise<Problem[]> {
   const total: number = first.data.data.problemsetQuestionList.totalNum;
   console.log(`Total solved on LeetCode: ${total}`);
 
-  // Fetch all
-  const res = await axios.post(
-    LEETCODE_GRAPHQL,
-    { query, variables: { limit: total, skip: 0, filters: { status: 'AC' } } },
-    { headers: headers() }
-  );
-  return res.data.data.problemsetQuestionList.questions as Problem[];
+  // Paginate in chunks of 100 (LeetCode's max per request)
+  const PAGE_SIZE = 100;
+  const problems: Problem[] = [];
+  for (let skip = 0; skip < total; skip += PAGE_SIZE) {
+    const res = await axios.post(
+      LEETCODE_GRAPHQL,
+      { query, variables: { limit: PAGE_SIZE, skip, filters: { status: 'AC' } } },
+      { headers: headers() }
+    );
+    problems.push(...(res.data.data.problemsetQuestionList.questions as Problem[]));
+  }
+  return problems;
 }
 
 async function fetchLatestACSubmission(
@@ -207,12 +183,6 @@ function solution() {
 
 // --- README generation ---
 
-const DIFFICULTY_ICON: Record<string, string> = {
-  Easy: '🟢',
-  Medium: '🟡',
-  Hard: '🔴',
-};
-
 function generateReadme(problems: Problem[]): string {
   const sorted = [...problems].sort(
     (a, b) => parseInt(a.questionFrontendId) - parseInt(b.questionFrontendId)
@@ -238,7 +208,7 @@ function generateReadme(problems: Problem[]): string {
 
   return `# LeetCode Solutions
 
-> Auto-synced from LeetCode. Solutions are written in TypeScript.
+> Auto-synced from LeetCode. Solutions are primarily written in Python.
 
 ## Stats
 
